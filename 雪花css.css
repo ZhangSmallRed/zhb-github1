@@ -1,0 +1,255 @@
+/*初始化页面，去除边框的边距，去除li的小点，背景图片，字体为白色*/
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#FFF;
+}
+body{/*背景颜色/图片*/
+	background:url(%E9%9B%AA%E6%99%AF/00001.jpg) 100% ;
+}
+
+
+/*111111111、头部滚动文字部分。定义div的宽高，左右自适应，上下距离为0，字体的行高，大小，粗体*/
+.top{
+	height:50px;
+	line-height:50px;
+	font-size:24px;
+	font-weight:900;
+}
+marquee{/*设置滚动文字的颜色*/
+	color:#0F0;
+}
+
+
+/*555555、设置播放按钮的相对浏览器的定位*/
+#bofang{
+    width:50px;
+	height:50px;
+	position:fixed;
+	top:10px;
+	right:10px;
+}
+@keyframes bf {/*通过 @keyframes 规则，您能够创建动画。创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。0-100%,from（与 0% 相同）,to（与 100% 相同）*/
+	    from { transform: rotateZ(0); }
+	    to { transform:rotateZ(360deg); }
+}
+#bofang img{/*设置播放按钮放的图片的大小*/
+	width:50px;
+	height:50px;
+}
+.zhuanquan{/*写好一个类用于让js调用，实现的效果是播放的图片旋转*/
+	animation: bf  4s infinite linear;/*动画名称是bf，4秒钟完成一个动画，无线循环*/
+}	
+
+
+/*222222222、设置自我介绍文字的颜色和div的宽高*/
+.text{
+    float:left;
+	color:#6Ff;
+	width:20%;
+	height:800px;
+	margin-top:50px;
+	border:1px solid blue;
+}
+.text button{/*自我介绍的按钮宽高，颜色，字体大小加粗*/
+	width:100%;
+	height:40px;
+	background-color:#f9F;
+	color:#f40;
+	font-size:24px;
+	line-height:40px;
+	font-weight:900;
+}
+
+
+/*33333、中间的动画部分*/
+.zhongjian{/*定义中间大的部分的宽高和定位*/
+	width:59%;
+	height:1050px;
+	margin-top:50px;
+	border:1px solid red;
+	float:left;
+}
+.shu{/*中间上方的书样式的边框*/
+	width:99%;
+	height:700px;
+	border:1px solid green;
+}
+.music-box{/*设置宽高，外边距，相对定位，3D效果，背景*/
+	 width:350px;
+	 height:600px;
+	 margin:50px auto;
+	 position:relative;
+	 transform-style: preserve-3d;
+	 background-color:green;
+}
+.music-box1,.music-box2,.music-box11,.music-box22{/*设置元属的内容，块级元素，绝对定位，宽高*/
+	  transform-style: preserve-3d;
+	  display:block;
+	  position:absolute;
+	  left:0;
+	  top:0;
+	  width:100%;
+	  height:100%;
+	  /*border-radius:50%;*/
+}	 
+.music-box1{
+	background-color:blue;
+}
+.music-box2{
+	background-color:red;
+} 
+.music-box11{/*设置元属的背景，动画饶左旋转*/
+		  /*background-image:url(img/bb.jpg);*/
+		  background-color:blue;
+		  /*transition:all 10s;*/
+		  transform-origin: left;
+		  /*backface-visibility:hidden;*/
+		   animation: dier  8s forwards 12s;/* 定义动画的名称，运行时间，不会自己还原，延迟12秒后执行*/
+}
+
+.music-box22{/*设置元属的背景，动画饶左旋转*/  
+		  background-color:red;
+		  transform-origin:center left;
+		  animation: diyi  8s forwards 2s ;/*定义动画的名称，运行时间，不会自己还原，延迟2秒后执行*/
+}
+@keyframes diyi {/*通过 @keyframes 规则，您能够创建动画。创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。0-100%,from（与 0% 相同）,to（与 100% 相同）*/
+	    from { transform:rotateY(0) skewY(0); }
+	    to { transform:rotateY(-125deg) skewY(-10deg); }
+}
+@keyframes dier {/*通过 @keyframes 规则，您能够创建动画。创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。0-100%,from（与 0% 相同）,to（与 100% 相同）*/
+	    from { transform:rotateY(0) skewY(0); }
+	    to { transform:rotateY(-120deg) skewY(-10deg); }
+}	 
+.music-box1-zheng{/*将要翻转的背面先自己旋转180度*/
+	transform:rotateY(180deg);
+}
+.music-box2-zheng{
+	transform:rotateY(180deg);
+} 
+.music-box div div{/*设置正面和背面的宽高，隐藏属性，绝对定位，位置居中展示和字体颜色*/
+	width:100%;
+	height:100%;
+	backface-visibility:hidden;
+	position:absolute;
+	margin:0 auto;
+	text-align: center;
+}
+.mofang{/*设置魔方的外边的框架的大小*/
+	width:49%;
+	height:350px;
+	border:1px solid red;
+	float:left;
+}
+#q{/*定义两个魔方的大小，定位，3D效果，动画*/
+	  width:200px;
+	  height:200px;
+	  margin:80px auto;
+	  /*perspective:1000px;*/
+	  position:relative;
+	  transform-style:preserve-3d;
+	  animation: spin  40s infinite linear;/*1、设置要进行动画的名称，2、动画的时长3、待定，4、设置动画将如何完成一个周期linear表示速度一直是相同的*/
+}
+#q:hover{
+	animation-play-state:paused;/*鼠标移入后动画停止，移除鼠标后继续动画*/
+} 
+@keyframes spin {/*通过 @keyframes 规则，您能够创建动画。创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。0-100%,from（与 0% 相同）,to（与 100% 相同）*/
+	    from { transform: rotateX(0)  rotateY(0); }
+	    to { transform: rotateX(360deg)  rotateY(360deg); }
+}
+.a1,.a2,.a3,.a4,.a5,.a6{/*定义每个面的大小，文字居中，字体大小，透明度，定位*/
+	  width:100%;
+	  height:100%;
+	  text-align:center;
+	  line-height:200px;
+	  font-size:40px;
+	  opacity:0.8;
+	  position:absolute;
+	  left:0;
+	  top:0;
+}
+.a1{
+	  background-color:#f00;
+	  transform:rotateY(90deg) translateZ(-100px); /*设置a1 Y轴旋转90度，达到一种不可见的效果，立方体的左面，Z轴旋转-100度，二分之一的元素高度*/
+}
+.a2{
+	  background-color:#0f0;
+	  transform:rotateY(90deg) translateZ(100px); /*设置a2 Y轴旋转90度，达到一种不可见的效果，立方体的右面，Z轴旋转100度，二分之一的元素高度*/
+}
+.a3{
+	  background-color:#00f;
+	  transform:rotateX(90deg) translateZ(-100px); /*设置a3 X轴旋转90度，达到一种不可见的效果，立方体的下面，Z轴旋转-100度，二分之一的元素高度*/
+} 
+.a4{
+	  background-color:#ff0;
+	  transform:rotateX(90deg) translateZ(100px); /*设置a4 Y轴旋转90度，达到一种不可见的效果，立方体的上面，Z轴旋转100度，二分之一的元素高度*/
+} 
+.a5{
+	  background-color:#0ff;
+	  transform:translateZ(100px); /*设置a5 为立方体的前面，Z轴旋转100度，二分之一的元素高度*/
+} 
+.a6{
+	  background-color:#f0f;
+	  transform:translateZ(-100px); /*设置a6 为立方体的后面，Z轴旋转100度，二分之一的元素高度*/
+}
+
+
+/*44444444444、定义右侧信息的大小，边距*/
+.xinxi{
+	width:20%;
+	height:800px;
+	float:right;
+	border:1px solid blue;
+	margin-top:50px;
+}
+.nav{/*定义一个ul的大小*/
+	margin-top:20px;
+	  height:40px;
+	  text-align:center;/*设置字体居中*/
+}
+.nav li{
+	 margin-top:10px;
+	 margin-left:10%;/*设置距左边的外边距为2px*/
+	width:120px;
+    height:40px;
+	line-height:40px;/*设置字体的高度为元素的高度*/
+	float:left;/*设置li水平布局*/
+	transform-style:preserve-3d;/*transform--style属性指定嵌套元素是怎样在三维空间中呈现。使用此属性必须先使用 transform 属性.当值为flat时表示所有子元素在2D平面展示*/
+	transition:all 1s;/*设置动画的过渡效果为1s*/
+}
+.nav li span{
+	  position:absolute;/*设置span为绝对定位，原位置释放*/
+	  display:block;/*设置为块级元素*/
+	  width:100%;/*设置span在li中的宽高都是100%*/
+	  height:100%;
+}
+.nav li span:first-child{
+	  background-color:#00F;
+	  transform:rotateX(90deg)translateZ(20px);/*将每个li中第一个span元素延X轴旋转90度，达到一种看不见的效果，设置元素绕Z轴旋转二分之一的元素的高*/
+}
+.nav li span:last-child{
+	  background-color:#f0f;
+	  transform:translateZ(20px);/*将每个li中第二个span元素显示的效果，设置元素绕Z轴旋转二分之一的元素的高*/
+}
+.nav li:hover{
+	  transform:rotateX(-90deg);/*当鼠标移入时，元素绕X轴旋转-90度*/
+}
+
+
+
+
+.xh {/*写好一个类用于让js调用，实现的效果是雪花落下的动画*/
+            animation: snow 8s infinite linear;
+        }
+        @keyframes snow{/*定义一个动画，让雪花旋转720度。透明度变化，*/
+            0%{
+                transform: rotateZ(0);
+            }
+            
+            100%{
+                transform: rotateZ(720deg);
+                opacity: 0;
+            }
+            
+        }

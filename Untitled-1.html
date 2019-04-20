@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.music-box{/*设置宽高，外边距，相对定位，3D效果，背景*/
+	 width:300px;
+	 height:300px;
+	 margin:50px auto;
+	 position:relative;
+	 transform-style: preserve-3d;
+	 background-color:green;
+	 
+	 }
+
+.music-box1,.music-box2,.music-box11,.music-box22{/*设置元属的内容，块级元素，绝对定位，宽高*/
+	  transform-style: preserve-3d;
+	  display:block;
+	  position:absolute;
+	  left:0;
+	  top:0;
+	  width:100%;
+	  height:100%;
+	  /*border-radius:50%;*/
+	  }	  
+
+
+.music-box1{
+	background-color:blue;
+}
+.music-box2{
+	background-color:red;
+}
+.music-box11{/*设置元属的背景，动画饶左旋转*/
+          
+		  /*background-image:url(img/bb.jpg);*/
+		  background-color:blue;
+		  /*transition:all 10s;*/
+		  transform-origin: left;
+		  /*backface-visibility:hidden;*/
+		   animation: dier  8s forwards 12s;/* 定义动画的名称，运行时间，不会自己还原，延迟12秒后执行*/
+		  }
+
+.music-box22{/*设置元属的背景，动画饶左旋转*/
+          
+		  background-color:red;
+		  transform-origin:center left;
+		  animation: diyi  8s forwards 2s ;/*定义动画的名称，运行时间，不会自己还原，延迟2秒后执行*/
+		  }
+
+
+
+		  
+		  
+	  @keyframes diyi {/*通过 @keyframes 规则，您能够创建动画。创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。0-100%,from（与 0% 相同）,to（与 100% 相同）*/
+	    from { transform:rotateY(0) skewY(0); }
+	    to { transform:rotateY(-125deg) skewY(-10deg); }
+      }
+	  @keyframes dier {/*通过 @keyframes 规则，您能够创建动画。创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。0-100%,from（与 0% 相同）,to（与 100% 相同）*/
+	    from { transform:rotateY(0) skewY(0); }
+	    to { transform:rotateY(-120deg) skewY(-10deg); }
+      }
+	 
+.music-box1-zheng{/*将要翻转的背面先自己旋转180度*/
+	transform:rotateY(180deg);}
+.music-box2-zheng{
+	transform:rotateY(180deg);}
+	 
+.music-box div div{/*设置正面和背面的宽高，隐藏属性，绝对定位，位置居中展示和字体颜色*/
+	width:100%;
+	height:100%;
+	backface-visibility:hidden;
+	position:absolute;
+	margin:0 auto;
+	text-align: center;
+	color:#FFF;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="music-box">
+  <div class="music-box1">
+    <div class="music-box1-zheng">张红宾2<br/>sfad<br/>asdf</div>
+    <div class="music-box1-fan">smallred2<br/>sfad<br/>asdf</div>
+  </div>
+  
+  
+  <div class="music-box2">
+    <div class="music-box2-zheng">张红宾</div>
+    <div class="music-box2-fan">smallred</div>
+  </div>
+  
+  <div class="music-box3"></div>
+  
+<script>
+  var box1=document.getElementsByClassName('music-box1')[0];
+  var box2=document.getElementsByClassName('music-box2')[0];
+  var kaishu=document.getElementsByClassName('music-box2-fan')[0];
+  kaishu.onclick=function(){
+	  box1.className='music-box11';
+	  box2.className='music-box22';
+	  }
+</script>
+</div>
+</body>
+</html>
