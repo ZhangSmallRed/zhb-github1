@@ -27,7 +27,7 @@ if(yinyue.paused){//如果音乐是停止的，就执行下列方法
 	
 	
 //自我介绍	
-var string =  "您好，你是第"+localStorage.pagecount+"位访客：很高兴您能在百忙之中看到一个小学生的页面，下面我将简单的做一个自我介绍";
+var string =  "您好，这是您第"+localStorage.pagecount+"位访客：很高兴您能在百忙之中看到一个小学生的页面，下面我将简单的做一个自我介绍：";
 var text = document.getElementsByClassName('text')[0];//获得展示文本的div
 var timer = null;//声明一个timer用来放setTimeout，初始化为null
 var  num = 0;//定义一个num为0
