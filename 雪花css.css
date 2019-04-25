@@ -50,7 +50,7 @@ marquee{/*设置滚动文字的颜色*/
 	width:20%;
 	height:800px;
 	margin-top:50px;
-	border:1px solid blue;
+	
 }
 .text button{/*自我介绍的按钮宽高，颜色，字体大小加粗*/
 	width:100%;
@@ -69,13 +69,13 @@ marquee{/*设置滚动文字的颜色*/
 	width:59%;
 	height:1050px;
 	margin-top:50px;
-	border:1px solid red;
+	
 	float:left;
 }
 .shu{/*中间上方的书样式的边框*/
 	width:99%;
 	height:700px;
-	border:1px solid green;
+	
 }
 .music-box{/*设置宽高，外边距，相对定位，3D效果，背景*/
 	 width:350px;
@@ -140,7 +140,7 @@ marquee{/*设置滚动文字的颜色*/
 .mofang{/*设置魔方的外边的框架的大小*/
 	width:49%;
 	height:350px;
-	border:1px solid red;
+	
 	float:left;
 }
 #q{/*定义两个魔方的大小，定位，3D效果，动画*/
@@ -201,7 +201,7 @@ marquee{/*设置滚动文字的颜色*/
 	width:20%;
 	height:800px;
 	float:right;
-	border:1px solid blue;
+	
 	margin-top:50px;
 }
 .nav{/*定义一个ul的大小*/
