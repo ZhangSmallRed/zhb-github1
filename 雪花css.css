@@ -137,6 +137,9 @@ marquee{/*设置滚动文字的颜色*/
 	margin:0 auto;
 	text-align: center;
 }
+
+
+
 .mofang{/*设置魔方的外边的框架的大小*/
 	width:49%;
 	height:350px;
@@ -165,7 +168,7 @@ marquee{/*设置滚动文字的颜色*/
 	  text-align:center;
 	  line-height:200px;
 	  font-size:40px;
-	  opacity:0.8;
+	  /*opacity:0.9;*/
 	  position:absolute;
 	  left:0;
 	  top:0;
@@ -174,14 +177,23 @@ marquee{/*设置滚动文字的颜色*/
 	  background-color:#f00;
 	  transform:rotateY(90deg) translateZ(-100px); /*设置a1 Y轴旋转90度，达到一种不可见的效果，立方体的左面，Z轴旋转-100度，二分之一的元素高度*/
 }
+.a1 h3{/*让当前的这一面自己先旋转一个角度*/
+	transform:rotateY(180deg);
+}
 .a2{
 	  background-color:#0f0;
 	  transform:rotateY(90deg) translateZ(100px); /*设置a2 Y轴旋转90度，达到一种不可见的效果，立方体的右面，Z轴旋转100度，二分之一的元素高度*/
+}
+.a2 h3{/*让当前的这一面自己先旋转一个角度*/
+	transform:rotateY(-180deg) rotateX(180deg);
 }
 .a3{
 	  background-color:#00f;
 	  transform:rotateX(90deg) translateZ(-100px); /*设置a3 X轴旋转90度，达到一种不可见的效果，立方体的下面，Z轴旋转-100度，二分之一的元素高度*/
 } 
+.a3 h3{
+	transform:rotateX(180deg) rotateZ(-90deg);
+}
 .a4{
 	  background-color:#ff0;
 	  transform:rotateX(90deg) translateZ(100px); /*设置a4 Y轴旋转90度，达到一种不可见的效果，立方体的上面，Z轴旋转100度，二分之一的元素高度*/
