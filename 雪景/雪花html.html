@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>雪花飘飘</title>
+<!--引入css-->
+<link href="雪花css.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+
+<!--1111111、滚动的文字。定义一个头标题，类名top-->
+<div class="top" >
+  <!--marquee标签中设置标签内容滚动效果，里面可以是文字、图片等-->
+  <!--behavior属性的值，alternate来回滚动，scroll单方向循环滚动，slide只滚动一次-->
+  <!--direction属性的值，up向上滚动，down向下滚动，left向左滚动，right向右滚动-->
+  <!--bgcolor设置文字滚动的背景颜色-->
+  <!--loop设置文字滚动的次数，默认为无限循环-->
+  <!--scrollamount设置文字滚动的速度-->
+  <marquee behavior="scroll" direction="left" >雪落下的声音</marquee>
+</div>
+
+
+<!--2222222、定义一个自动逐个展示文字信息的div。-->
+<div class="text">
+  <button class="gushi">自我介绍</button><!--定义一个按钮，将通过js点击开始执行-->
+</div>
+
+
+<!--33333、定义中间部分的内容-->
+<div class="zhongjian">
+  <div class="shu"><!--中间上方的书的动画-->
+    <div class="music-box">
+      <div class="music-box1">
+        <div class="music-box1-zheng">张红宾<br/>sfad<br/>asdf</div>
+        <div class="music-box1-fan">smallred1<br/>sfad<br/>asdf</div>
+      </div>
+      <div class="music-box2">
+        <div class="music-box2-zheng">张红宾</div>
+        <div class="music-box2-fan">
+          自我介绍
+          <div  style=" background-color:#000; width:200px; height:50px; left:50%; top:50%; margin:-25px 0 0 -100px">点击开启故事</div>
+        </div>
+      </div>
+      <div class="music-box3"></div>
+    </div>
+  </div>
+  <div class="mofang"><!--中间下方的第一个魔方-->
+    <div id="q">
+      <div class="a1"><h3>web</h3></div>
+      <div class="a2"><h3>js</h3></div>
+      <div class="a3"><h3>css</h3></div>
+      <div class="a4"><h3>html</h3></div>
+      <div class="a5"><h3>php</h3></div>
+      <div class="a6"><h3>java</h3></div>
+    </div>
+  </div>
+  <div class="mofang"><!--中间下方的第二个魔方-->
+    <div id="q">
+      <div class="a1"><h3>html5</h3></div>
+      <div class="a2"><h3>css3</h3></div>
+      <div class="a3"><h3>vue</h3></div>
+      <div class="a4"><h3>GitHub</h3></div>
+      <div class="a5"><h3>dw</h3></div>
+      <div class="a6"><h3>ps</h3></div>
+    </div>
+  </div>
+</div>
+
+
+<!--4444444、定义页面右边的信息部分-->
+<div class="xinxi">
+  <ul class="nav"><!--第一行的信息-->
+    <li>
+      <span>张红宾</span>
+      <span>姓名</span>
+    </li>
+    <li>
+      <span>男</span>
+      <span>性别</span>
+    </li>
+  </ul>
+  <ul class="nav"><!--第二行的信息-->
+    <li>
+      <span>1997.12.08</span>
+      <span>生日</span>
+    </li>
+    <li>
+      <span>吃喝玩乐</span>
+      <span>爱好</span>
+    </li>
+  </ul>
+</div>
+
+
+
+<!--555555、定义一个div用来播放暂停音乐。ID名bofang-->
+<div id="bofang"><img id="img1" src="播放.png"/></div>
+<!--audio标签设置音乐，autoplay设置自动播放,controls设置显示控件，loop设置循环次数，只用写属性名就行，一般不用写值,本例子用js控制播放按钮写的-->
+<audio id="yinyue" src="雪落下的声音-陆虎.mp3"></audio>
+
+
+<!--引入js-->
+<script src="雪花js.js" type="text/javascript"></script>
+
+</body>
+</html>
