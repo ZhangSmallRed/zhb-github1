@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>less</title>
+    <!-- 需要在这里让type="text/less"，并且结合body下的script引入less.js才能使用 -->
+    <style type="text/less">
+        .le1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 0 auto;
+            .le11 {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                
+            }
+        }
+        /* .le1 .le11{把这个样式写到上面去，照样可以正常调用
+            width:100px;
+            height: 100px;
+            background-color: blue;
+            margin: 0 auto;
+        } */
+    </style>
+</head>
+<body>
+    <div class="le1">
+        <div class="le11"></div>
+    </div>
+
+</body>
+<script src="../less/less.js" type="text/javascript"></script>
+</html>

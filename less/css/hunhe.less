@@ -1,0 +1,33 @@
+.hunhe(@w,@h,@bc){
+    width: @w;
+    height: @h;
+    @{bg}:@bc;
+}
+.bo(@1,@2,@3){
+    border:@arguments;//接收前端传递过来的bo的所有参数
+}
+//写在这里让html继承，为了避免让生成的.css文件还是复制那么多的代码
+//继承后生成的.css的代码会减少许多，继承后生成的样式
+// .in,
+// .le1 .le13,
+// .le1 .le14 {
+//   width: 50px;
+//   height: 50px;
+//   border: 2px solid rebeccapurple;
+// }
+//共两种写法
+//.le13:extend(.in){}
+//.le14{&:extend(.in all);}通过all可以把.in:hover{}属性
+.in{
+    width: 20+20px;//在less中可以进行+-*/的计算
+    height: ~"40px";//~""在这里就是避免编译，会原封不动的编译成css文件
+    border:2px solid rebeccapurple;
+}
+//一个跟in有关的属性，在前台可以用，继承后生成的样式
+// .in:hover,
+// .le1 .le14:hover {
+//   background-color: red;
+// }
+.in:hover{
+    background-color: red;
+}
